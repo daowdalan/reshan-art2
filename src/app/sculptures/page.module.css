@@ -1,0 +1,21 @@
+/* Assuming you have a container class */
+.container {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+  }
+  
+  .container.appear {
+    opacity: 1;
+  }
+  
+
+  .project-card__image img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+h2{
+  color: brown;
+}
+
