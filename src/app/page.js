@@ -1,3 +1,4 @@
+import ArtGallery from "@/components/HomePage/Gallery";
 import HeroSection from "../components/HomePage/HeroSection";
 
 
@@ -9,8 +10,9 @@ export const metadata = {
 
 export default function Home() {
   return (
-      <div className="container mt-20 mx-auto">
+      <div className="container mt-10 mx-auto">
         <HeroSection />
+        <ArtGallery />
       </div>
   );
 }

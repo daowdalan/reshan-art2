@@ -11,6 +11,7 @@ const artworksData = [
     description: "Stone Carving",
     dimensions: "12X17",
     work_date: "2022",
+    featured : true,
   },
 
   {
@@ -22,6 +23,7 @@ const artworksData = [
     description: "Stone Carving",
     dimensions: "16X9",
     work_date: "2023",
+    featured : true,
   },
 
   {
@@ -33,6 +35,7 @@ const artworksData = [
     description: "Stone Carving",
     dimensions: "12.5X12.5",
     work_date: "2023",
+    featured : true,
   },
 
   {
@@ -56,6 +59,7 @@ const artworksData = [
     description: "x",
     dimensions: "unknown",
     work_date: "2023",
+    featured : true,
   },
   
   {
@@ -78,6 +82,7 @@ const artworksData = [
     description: "xxxxx",
     dimensions: "unknown",
     work_date: "2023",
+    
   },
 
   {
@@ -92,6 +97,7 @@ const artworksData = [
     description: "xx",
     dimensions: "unknown",
     work_date: "2010",
+    featured : true,
   },
   {
     id: 9,
@@ -102,6 +108,7 @@ const artworksData = [
     description: "xx",
     dimensions: "unknown",
     work_date: "2010",
+    
   },
 
   

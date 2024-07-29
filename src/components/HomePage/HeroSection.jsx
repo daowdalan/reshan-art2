@@ -1,8 +1,5 @@
-"use client"
 import React from "react";
 import Image from "next/image";
-import { TypeAnimation } from "react-type-animation";
-import { motion } from "framer-motion";
 import { FaFacebookF } from "react-icons/fa6";
 import { SlSocialInstagram } from "react-icons/sl";
 import { IoLogoYoutube } from "react-icons/io5";
@@ -24,50 +21,24 @@ const HeroSection = () => {
           </a>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.1 }}
-          className="col-span-7 sm:col-span-7 place-self-center text-center sm:text-left justify-self-start"
-        >
+        <div className="col-span-7 sm:col-span-7 place-self-center text-center sm:text-left justify-self-start">
           <h1 className="text-black mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-800 to-purple-600">
               Hello, I&apos;m{" "}
             </span>
             <br></br>
-            <TypeAnimation
-              sequence={[
-                "Reshan",
-                1000,
-              ]}
-              wrapper="span"
-              speed={50}
-              repeat={Infinity}
-            />
+            <span>Reshan</span>
           </h1>
           <p className="text-[#000000] text-base sm:text-lg mb-6 lg:text-xl">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
             voluptuous.
           </p>
           <div>
-            {/* <Link
-              href="/contact"
-              className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-800 to-secondary-500 hover:bg-slate-800 text-white mt-3"
-            >
-              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
-                Latest Artworks
-              </span>
-            </Link> */}
           </div>
-        </motion.div>
+        </div>
         
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="col-span-4 place-self-center lg:mt-0 sm:mt-40 "
-        >
-          <div className="rounded-full bg-[#000000] w-[350px] h-[350px] lg:w-[400px] lg:h-[400px] relative">
+        <div className="col-span-4 place-self-center lg:mt-0 sm:mt-40 ">
+          <div className="rounded-full bg-[#535353] w-[350px] h-[350px] lg:w-[400px] lg:h-[400px] relative">
             <Image
               src="/images/resh.jpg"
               alt="hero image"
@@ -76,7 +47,7 @@ const HeroSection = () => {
               height={500}
             />
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
