@@ -21,8 +21,8 @@ const ArtGallery = () => {
   const featuredArtworks = artworksData.filter(art => art.featured);
 
   return (
-    <div className="max-w-auto mx-auto px-4 py-8 text-black">
-      <h1 className="text-3xl font-bold mb-6">Featured</h1>
+    <div className="max-w-auto mx-auto py-10 text-black">
+      <h1 className="text-3xl font-bold mb-6">Featured Collections</h1>
       {isSmallScreen ? (
         <ArtSlider />
       ) : (
@@ -36,6 +36,7 @@ const ArtGallery = () => {
                 width={350}
                 height={250}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                
               />
               <div className="py-2">
                 <h2 className="text-sm font-normal">{art.title}</h2>

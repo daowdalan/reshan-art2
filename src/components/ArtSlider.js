@@ -1,11 +1,7 @@
-// components/ArtSlider.js
-
 import React from 'react';
 import Slider from 'react-slick';
 import Image from 'next/image';
 import artworksData from '@/app/data/artworksData';
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
 import styles from './ArtSlider.module.css';
 
 const ArtSlider = () => {
@@ -14,9 +10,11 @@ const ArtSlider = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 700,
     slidesToShow: 1,
     slidesToScroll: 1,
+    arrows:false
+    
   };
 
   return (
@@ -28,8 +26,7 @@ const ArtSlider = () => {
               className={styles.image}
               src={art.images[0].image}
               alt={art.title}
-              layout="responsive"
-              width={350}
+              width={250}
               height={250}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               loading="lazy"
@@ -43,6 +40,5 @@ const ArtSlider = () => {
     </Slider>
   );
 };
-
 
 export default ArtSlider;
