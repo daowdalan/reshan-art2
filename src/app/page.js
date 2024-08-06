@@ -1,5 +1,6 @@
 import ArtGallery from "@/components/HomePage/Gallery";
 import HeroSection from "../components/HomePage/HeroSection";
+import Slidering from "@/components/HomePage/Slidering";
 
 export const metadata = {
   title: 'Reshan - HomePage',
@@ -8,7 +9,7 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <div > {/* Add margin-top to ensure it doesn't overlap with the Navbar */}
+    <div >
       <HeroSection />
       <ArtGallery />
     </div>

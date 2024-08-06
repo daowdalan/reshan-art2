@@ -11,7 +11,6 @@ const artworksData = [
     description: "Stone Carving",
     dimensions: "12X17",
     work_date: "2022",
-    featured : true,
   },
 
   {
@@ -48,6 +47,7 @@ const artworksData = [
 ,
     dimensions: "unknown",
     work_date: "2023",
+    featured : true,
   },
 
   {
@@ -71,6 +71,7 @@ const artworksData = [
     description: "fsgv",
     dimensions: "unknown",
     work_date: "2023",
+    featured : true,
   },
 
   {
