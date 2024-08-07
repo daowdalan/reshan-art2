@@ -4,6 +4,8 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import artworksData from '@/app/data/artworksData'; // Ensure the path is correct
 import Image from 'next/image';
+import { useRouter, useSearchParams } from "next/navigation";
+
 
 function Slidering() {
 
@@ -17,7 +19,7 @@ function Slidering() {
         },
         desktop: {
             breakpoint: { max: 3000, min: 1024 },
-            items: 3
+            items: 4
         },
         tablet: {
             breakpoint: { max: 1024, min: 464 },
@@ -28,9 +30,14 @@ function Slidering() {
             items: 1
         }
     };
+    const router = useRouter();
+
+    const handleProjectClick = (projectId) => {
+        router.push(`/sculptures/${projectId}`);
+      };
 
     return (
-        <div className="my-10 px-2 ">
+        <div className="my-4 px-2 ">
             <Carousel responsive={responsive}
             
             >
@@ -39,12 +46,9 @@ function Slidering() {
                         <Image
                         src={artwork.images[0].image}
                         alt="hero image"
-                        width={550}
-                        height={550}
-                        style={{
-                            width: "auto",
-                            height: "100%"
-                        }}
+                        height={350}
+                        width={500}
+                        onClick={() => handleProjectClick(artwork.id)}
                         />
                         
                     </div>
