@@ -42,17 +42,22 @@ function Slidering() {
             
             >
                 {featuredArtworks.map((artwork, index) => (
-                    <div key={index} className="flex justify-center w-full h-full p-1">
-                        <Image
-                        src={artwork.images[0].image}
-                        alt="hero image"
-                        height={350}
-                        width={500}
-                        onClick={() => handleProjectClick(artwork.id)}
-                        />
-                        
-                    </div>
-                ))}
+    <div key={index} className="flex flex-col justify-start items-center w-full h-full p-1">
+        <Image
+            src={artwork.images[0].image}
+            alt="hero image"
+            height={450}
+            width={900}
+            sizes="(max-width: 640px) 100vw, (max-width: 768px) 70vw, (max-width: 1024px) 66vw, 50vw"
+            onClick={() => handleProjectClick(artwork.id)}
+        />
+        <div className="w-full mt-2 text-center">
+            <h2 className="text-sm line-clamp-2">{artwork.title}</h2>
+        </div>
+    </div>
+))}
+
+
             </Carousel>
         </div>
     );

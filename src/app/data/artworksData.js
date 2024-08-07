@@ -16,7 +16,7 @@ const artworksData = [
   {
     id: 2,
     images: [
-      { image: "/images/2-2.jpg" },
+      { image: "/images/2-2.webp" },
     ],
     title: "Acbatana Royal Cup",
     description: "Stone Carving",
@@ -40,7 +40,7 @@ const artworksData = [
   {
     id: 4,
     images: [
-      { image: "/images/4-1.png" },
+      { image: "/images/4-1.webp" },
     ],
     title: " Baba Tahirê Uryan 935-1010 Z",
     description: "fDi kûrahîya dîroka dûr ya Kurdistanê de, mezinkirina me ji bo helbestvanekî afrîner e, ku berîya Hezar sal, weke stêrkek biriqandî li ezmanê edebîyatê diçirisî.Helbestên wî rehjena çiya û newalan lêdidan, têlên peyvên wî bi zîrekîya hunera wî re li hev dixistin.Ew me bi xwe re dibe geryanekê di nav cîhana wî ya bedew ku mijt xewn û xeyal in. Avakirina Jîyanê: Baba Tahirê Uryan 935-1010 Z. Fîlosof û helbestvanek Kurd. Bê te yek dem dilê min kêfxweş nîne Eger riwê te bibînim xema min namîne Eger derdê dilê min bê parvekirinLi dinyayê dilekî bêderd namîne!"
