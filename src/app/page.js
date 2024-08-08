@@ -1,6 +1,6 @@
-import ArtGallery from "@/components/HomePage/Gallery";
+import Featured from "@/components/HomePage/Featured";
 import HeroSection from "../components/HomePage/HeroSection";
-import Slidering from "@/components/HomePage/Slidering";
+import OnProgress from "@/components/HomePage/OnProgress";
 
 export const metadata = {
   title: 'Reshan - HomePage',
@@ -11,7 +11,9 @@ export default function Home() {
   return (
     <div >
       <HeroSection />
-      <ArtGallery />
+      <Featured />
+      <OnProgress />
+
     </div>
   );
 }

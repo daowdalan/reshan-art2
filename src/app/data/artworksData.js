@@ -72,6 +72,7 @@ const artworksData = [
     dimensions: "unknown",
     work_date: "2023",
     featured : true,
+    OnProgress : true,
   },
 
   {
