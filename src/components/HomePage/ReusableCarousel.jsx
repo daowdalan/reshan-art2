@@ -1,13 +1,19 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Image from 'next/image';
 import { useRouter } from "next/navigation";
 
 const ReusableCarousel = ({ data, responsiveSettings }) => {
-    const [progress, setProgress] = useState(0);  // State to track progress
+    const [isClient, setIsClient] = useState(false);  // State to track if we're on the client side
+    const [progress, setProgress] = useState(0);
     const router = useRouter();
+
+    // Use effect to detect if we're on the client side
+    useEffect(() => {
+        setIsClient(true);  // Now we're in the browser
+    }, []);
 
     const handleProjectClick = (id) => {
         router.push(`/sculptures/${id}`);
@@ -20,13 +26,17 @@ const ReusableCarousel = ({ data, responsiveSettings }) => {
         setProgress(newProgress);
     };
 
+    if (!isClient) {
+        return null;  // If we're rendering on the server, return nothing
+    }
+
     return (
         <div className="my-2 px-2 relative">
             {/* Carousel Component */}
             <Carousel
                 responsive={responsiveSettings}
                 swipeable={true}
-                draggable={window.innerWidth <= 1024} 
+                draggable={isClient && window.innerWidth <= 1024}  
                 showDots={false}
                 arrows={true}
                 infinite={false}   // Disable infinite scrolling for progress to make sense
@@ -76,7 +86,7 @@ const ReusableCarousel = ({ data, responsiveSettings }) => {
             <div className="w-full h-2 bg-gray-200 mt-4">
                 <div
                     className="h-full bg-blue-500 transition-all duration-300"
-                    style={{ width: `${progress}%` }} 
+                    style={{ width: `${progress}%` }}  
                 />
             </div>
         </div>
