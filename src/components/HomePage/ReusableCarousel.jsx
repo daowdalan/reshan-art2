@@ -10,6 +10,28 @@ const ReusableCarousel = ({ data, responsiveSettings }) => {
     const [progress, setProgress] = useState(0);
     const router = useRouter();
 
+    const CustomLeftArrow = ({ onClick }) => {
+        return (
+          <button
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-gray-900 text-white w-10 h-10 flex items-center justify-center rounded-full cursor-default lg:hover:bg-gray-700 lg:transition-colors lg:duration-300"
+          onClick={onClick}
+          >
+            &lt;
+          </button>
+        );
+      };
+      
+      const CustomRightArrow = ({ onClick }) => {
+        return (
+          <button
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-gray-900 text-white w-10 h-10 flex items-center justify-center rounded-full cursor-default lg:hover:bg-gray-700 lg:transition-colors lg:duration-300"
+          onClick={onClick}
+          >
+            &gt;
+          </button>
+        );
+      };
+
     // Use effect to detect if we're on the client side
     useEffect(() => {
         setIsClient(true);  // Now we're in the browser
@@ -39,6 +61,8 @@ const ReusableCarousel = ({ data, responsiveSettings }) => {
                 draggable={isClient && window.innerWidth <= 1024}  
                 showDots={false}
                 arrows={true}
+                customLeftArrow={<CustomLeftArrow />}
+                customRightArrow={<CustomRightArrow />}
                 infinite={false}   // Disable infinite scrolling for progress to make sense
                 keyBoardControl={true}
                 beforeChange={handleBeforeChange}  // Trigger progress update
