@@ -2,7 +2,8 @@ import React from 'react';
 import ReusableCarousel from './ReusableCarousel';
 import artworksData from '@/app/data/artworksData'; // Ensure the path is correct
 
-const OnProgressArtworks = artworksData.filter(art => art.OnProgress ==true);
+// Filter only artworks that are marked as "OnProgress"
+const OnProgressArtworks = artworksData.filter(art => art.OnProgress === true);
 
 const responsiveSettings = {
     superLargeDesktop: {
@@ -14,24 +15,31 @@ const responsiveSettings = {
         items: 4
     },
     tablet: {
-        breakpoint: { max: 1024, min: 464 },
+        breakpoint: { max: 1024, min: 600 },
         items: 2
     },
     mobile: {
-        breakpoint: { max: 464, min: 0 },
+        breakpoint: { max: 600, min: 0 },
         items: 1
     }
 };
 
 const OnProgress = () => {
     return (
-        <div className="py-10 text-black">
-            <h1 className="text-2xl font-bold px-3">OnProgress Collections</h1>
-            <ReusableCarousel
-                data={OnProgressArtworks}
-                responsiveSettings={responsiveSettings}
-            />
-        </div>
+        <section className="py-16 bg-gray-100">
+            <div className="container mx-auto">
+                {/* Section Title */}
+                <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-900">
+                    On-Progress Collections
+                </h2>
+                
+                {/* Carousel Component */}
+                <ReusableCarousel
+                    data={OnProgressArtworks}
+                    responsiveSettings={responsiveSettings}
+                />
+            </div>
+        </section>
     );
 };
 

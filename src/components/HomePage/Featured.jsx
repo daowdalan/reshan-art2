@@ -2,7 +2,8 @@ import React from 'react';
 import ReusableCarousel from './ReusableCarousel';
 import artworksData from '@/app/data/artworksData'; // Ensure the path is correct
 
-const featuredArtworks = artworksData.filter(art => art.featured ==true);
+// Filter only featured artworks
+const featuredArtworks = artworksData.filter(art => art.featured === true);
 
 const responsiveSettings = {
     superLargeDesktop: {
@@ -11,27 +12,34 @@ const responsiveSettings = {
     },
     desktop: {
         breakpoint: { max: 3000, min: 1024 },
-        items: 5
+        items: 4
     },
     tablet: {
-        breakpoint: { max: 1024, min: 464 },
+        breakpoint: { max: 1024, min: 600 },
         items: 2
     },
     mobile: {
-        breakpoint: { max: 464, min: 0 },
+        breakpoint: { max: 600, min: 0 },
         items: 1
     }
 };
 
 const Featured = () => {
     return (
-        <div className="py-10 text-black">
-            <h1 className="text-2xl font-bold px-3">Featured Collections</h1>
-            <ReusableCarousel
-                data={featuredArtworks}
-                responsiveSettings={responsiveSettings}
-            />
-        </div>
+        <section className="py-16 bg-gray-100">
+            <div className="container mx-auto">
+                {/* Section Title */}
+                <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-900">
+                    Featured Collections
+                </h2>
+                
+                {/* Carousel Component with Progress Bar */}
+                <ReusableCarousel
+                    data={featuredArtworks}
+                    responsiveSettings={responsiveSettings}
+                />
+            </div>
+        </section>
     );
 };
 

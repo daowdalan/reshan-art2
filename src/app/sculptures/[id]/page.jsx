@@ -19,11 +19,10 @@ const SculpturePage = () => {
   return (
     <div className="flex flex-col md:flex-row items-start justify-between min-h-screen m-12 space-y-4 md:space-y-0 md:space-x-8">
       {/* Left Side: Description */}
-      <div className="w-full md:w-1/2 md:sticky top-10 ">
+      <div className="w-full md:w-1/2 md:sticky top-10">
         <div className="mb-4">
           <h2 className="text-black text-3xl font-bold">{artwork.title}</h2>
           <p className="text-black text-lg">{artwork.description}</p>
-          {/* Add more artwork details as needed */}
         </div>
       </div>
       

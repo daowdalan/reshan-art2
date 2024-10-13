@@ -48,6 +48,7 @@ const artworksData = [
     dimensions: "unknown",
     work_date: "2023",
     featured : true,
+    OnProgress : true,
   },
 
   {
@@ -60,6 +61,7 @@ const artworksData = [
     dimensions: "unknown",
     work_date: "2023",
     featured : true,
+    OnProgress : true,
   },
   
   {
@@ -84,6 +86,7 @@ const artworksData = [
     description: "xxxxx",
     dimensions: "unknown",
     work_date: "2023",
+    OnProgress : true,
     
   },
 
@@ -100,6 +103,7 @@ const artworksData = [
     dimensions: "unknown",
     work_date: "2010",
     featured : true,
+    OnProgress : true,
   },
   {
     id: 9,
