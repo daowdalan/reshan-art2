@@ -108,14 +108,41 @@ const artworksData = [
   {
     id: 9,
     images: [
-      { image: "/images/9-1.jpg" },
+      { image: "/images/7-1.png" },
     ],
-    title: "Hestiria",
-    description: "xx",
+    title: "unknown",
+    description: "xxxxx",
     dimensions: "unknown",
-    work_date: "2010",
+    work_date: "2023",
+    OnProgress : true,
     
   },
+  {
+    id: 10,
+    images: [
+      { image: "/images/7-1.png" },
+    ],
+    title: "unknown",
+    description: "xxxxx",
+    dimensions: "unknown",
+    work_date: "2023",
+    OnProgress : true,
+    
+  },
+
+  {
+    id: 11,
+    images: [
+      { image: "/images/7-1.png" },
+    ],
+    title: "unknown",
+    description: "xxxxx",
+    dimensions: "unknown",
+    work_date: "2023",
+    OnProgress : true,
+    
+  },
+
 
   
 ];

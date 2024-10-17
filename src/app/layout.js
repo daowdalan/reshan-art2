@@ -19,8 +19,8 @@ export default function RootLayout({ children }) {
       
       <body className={inter.className}>
       <PageTransition>
-          <Navbar />
-          <main className="pt-14"> {/* Add padding-top to avoid overlap with Navbar */}
+        <Navbar />
+          <main className="pt-10 bg-gray-100"> {/* Add padding-top to avoid overlap with Navbar */}
             {children}
           </main>
           <Footer />
